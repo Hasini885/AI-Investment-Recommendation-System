@@ -144,6 +144,11 @@ def allocation_donut(allocation):
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         font=dict(family='system-ui, -apple-system, "Segoe UI", sans-serif'),
+        # A label either renders at >= 11px or is hidden outright - never
+        # shrunk into illegibility or clipped by a thin segment. The smallest
+        # slice is 7%, so this matters. The table alongside carries every
+        # value regardless.
+        uniformtext=dict(minsize=11, mode="hide"),
     )
     return fig
 
