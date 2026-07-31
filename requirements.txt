@@ -1,7 +1,16 @@
-streamlit
-pyswip
-yfinance
-pandas
-plotly
-textblob
-
+# Pinned to major-version ranges so a fresh install cannot silently pull a
+# breaking release the day before a demo.
+#
+# pandas>=2.0 in particular is required: the History page relies on 2.x
+# DataFrame behaviour that differs in 1.x.
+streamlit>=1.36,<2.0
+pandas>=2.0,<3.0
+plotly>=5.20,<7.0
+yfinance>=0.2.60,<0.3
+textblob>=0.18,<0.20
+
+# Optional: the SWI-Prolog bridge. The app runs without it - advisor.py falls
+# back to an equivalent Python engine - but the expert system is the point of
+# the project, so install SWI-Prolog and keep this enabled.
+# Requires SWI-Prolog on PATH: https://www.swi-prolog.org/download/stable
+pyswip>=0.2.10,<0.4

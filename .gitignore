@@ -1,0 +1,27 @@
+# Local database - generated at runtime, must not be committed.
+# It previously shipped with real session rows in it.
+*.db
+*.db-journal
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Environments
+.venv/
+venv/
+env/
+.env
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
